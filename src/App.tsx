@@ -3,7 +3,7 @@ import { Router } from "@reach/router";
 import { ThemeProvider } from "emotion-theming";
 
 import "./App.css";
-import ScreenOne from "./screens/ScreenOne";
+import Scanner from "./screens/Scanner";
 import ScreenTwo from "./screens/ScreenTwo";
 import ScreenThree from "./screens/ScreenThree";
 import { theme } from "./components/appShell/Layout";
@@ -13,10 +13,10 @@ function App({}) {
   return (
     <ThemeProvider theme={theme}>
       <div className="app">
-        <Nav />
+        {/* <Nav /> */}
         <React.Suspense fallback={<div>Loading...</div>}>
           <Router>
-            <ScreenOne path="/one" default />
+            <Scanner path="/scanner" default />
             <ScreenTwo path="/two" />
             <ScreenTwo path="/two/:id" />
             <ScreenThree path="/three" />
